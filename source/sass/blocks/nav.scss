@@ -1,6 +1,8 @@
 .nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  transition: transform $trans-default;
 
   @include vp-767 {
     display: block;
@@ -11,7 +13,8 @@
     height: 100%;
     overflow: auto;
     transform: translate(-110%);
-    background-color: $color-alice-blue;
+    background-color: $color-glacier-1;
+    padding: 30px 20px;
 
     &.is-active {
       transform: translate(0);
@@ -23,9 +26,8 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 440px;
-  margin: 0;
+  margin: 0 0 0 -40px;
   padding: 0;
-  transition: transform $trans-default;
 
   @include vp-1023 {
     max-width: 320px;
@@ -40,13 +42,13 @@
 
 .nav__list-item {
   list-style: none;
-  margin-right: 40px;
-
+  padding-left: 40px;
 
   @include vp-767 {
     margin-bottom: 20px;
   }
 }
+
 
 .nav__link {
   font-weight: 400;
@@ -55,26 +57,62 @@
   color: $color-default-black;
 }
 
-.nav__logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  @include vp-767 {
-    left: 0;
-  }
-}
-
-.nav__icons {}
-
 .nav__button {
   display: none;
 
   @include vp-767 {
-    display: block;
+    display: flex;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: 60px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 0;
+      width: 24px;
+      height: 1px;
+      background-color: $color-default-black;
+      transition: transform $trans-default;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      right: 0;
+      width: 16px;
+      height: 1px;
+      background-color: $color-default-black;
+      transition: width $trans-default, transform $trans-default;
+    }
+
+    &:hover {
+      &::after {
+        width: 24px;
+      }
+    }
+  }
+
+  &.is-active {
+    &::before {
+      content: "";
+      top: 9px;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      top: 9px;
+      width: 24px;
+      transform: rotate(45deg);
+    }
   }
 }
