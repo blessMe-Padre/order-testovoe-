@@ -1,1 +1,7 @@
-.header {}
+.header {
+  position: relative;
+  min-height: 72px;
+  border-bottom: 0.5px solid $color-glacier;
+  display: flex;
+  align-items: center;
+}

@@ -14,11 +14,47 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        header
+        <div class="nav__logo">
+          <picture>
+            <source srcset="img/content/logo.webp 1x, img/content/logo@2x.webp 2x" type="image/webp">
+            <!-- 1х: 100px; 2x: 200px -->
+            <img src="img/content/logo.jpg" width="100" height="22" srcset="img/content/logo@2x.jpg 2x" alt="логотип">
+          </picture>
+        </div>
+        <nav class="nav is-active">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a class="nav__link" href="#" rel="noopener noreferrer">Каталог</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__link" href="#" rel="noopener noreferrer">О компании</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="nav__link" href="#" rel="noopener noreferrer">Магазины</a>
+            </li>
+          </ul>
+          <div class="nav__icons">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-user"></use>
+            </svg>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+            </svg>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-heart"></use>
+            </svg>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-bag"></use>
+            </svg>
+          </div>
+        </nav>
+        <button class="nav__button">меню</button>
       </div>
     </header>
     <main>
-      <button class="button">клик</button>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque repudiandae quos quis accusamus, sunt
+        voluptates iure, adipisci maxime harum animi culpa. Iure nihil optio ex dolores expedita minus? A neque ad
+        impedit quo corrupti eligendi labore illum deserunt perferendis!</p>
     </main>
     <footer class="footer page-section-4">
       footer

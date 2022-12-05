@@ -625,6 +625,69 @@ button,
   padding: 0 40px;
 }
 
+.header {
+  position: relative;
+  min-height: 72px;
+  border-bottom: 0.5px solid #c8c8c8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nav {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.nav__list-item {
+  list-style: none;
+  margin-right: 40px;
+}
+
+.nav__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.nav__logo {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+}
+
+.nav__icons {
+  margin-left: auto;
+}
+
+.nav__button {
+  display: none;
+}
+
 @media (max-width: 1439px) {
   .container {
     padding: 0 40px;
@@ -640,5 +703,57 @@ button,
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
+  }
+
+  .nav {
+    display: block;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-transform: translate(-110%);
+    -ms-transform: translate(-110%);
+    transform: translate(-110%);
+    background-color: #f9fbfd;
+  }
+
+  .nav.is-active {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+  }
+
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .nav__list-item {
+    margin-bottom: 20px;
+  }
+
+  .nav__logo {
+    left: 0;
+  }
+
+  .nav__icons {
+    margin-left: 0;
+  }
+
+  .nav__button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }

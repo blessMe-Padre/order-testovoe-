@@ -1,11 +1,11 @@
-import { initButtonClick } from './modules/buttonclick';
+import { initNavToggle } from './modules/nav-toggle';
 
 window.addEventListener('DOMContentLoaded', () => {
 
 
   // Modules
   // ---------------------------------
-  initButtonClick();
+  initNavToggle();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
