@@ -1,0 +1,34 @@
+.card {
+  padding: 0 25px;
+}
+
+.card__item {
+  display: flex;
+  max-width: 400px;
+}
+
+.card__img {}
+
+.card__descriptions {
+  padding-left: 20px;
+}
+
+.card__descriptions-tile {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color-default-black;
+  margin: 0 0 15px 0;
+}
+
+.card__descriptions-text {
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-quartz;
+  margin: 0 0 10px 0;
+
+  span {
+    color: $color-default-black;
+    margin-left: 5px;
+  }
+}

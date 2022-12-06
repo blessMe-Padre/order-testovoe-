@@ -825,11 +825,46 @@ button,
   margin: 0 0 30px 0;
 }
 
+.card {
+  padding: 0 25px;
+}
+
+.card__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 400px;
+}
+
+.card__descriptions {
+  padding-left: 20px;
+}
+
+.card__descriptions-tile {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0 0 15px 0;
+}
+
+.card__descriptions-text {
+  font-size: 12px;
+  line-height: 15px;
+  color: #6e6e6e;
+  margin: 0 0 10px 0;
+}
+
+.card__descriptions-text span {
+  color: #000000;
+  margin-left: 5px;
+}
+
 .size-radio__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 0;
 }
 
@@ -864,6 +899,56 @@ button,
 .size-radio__label input:checked + span {
   color: #ffffff;
   background-color: #000000;
+}
+
+.color-radio__grey {
+  background-color: #444444;
+}
+
+.color-radio__blue {
+  background-color: #106da2;
+}
+
+.color-radio__brown {
+  background-color: #ae6d0C;
+}
+
+.color-radio__list {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.color-radio__item {
+  list-style: none;
+}
+
+.color-radio__label {
+  cursor: pointer;
+}
+
+.color-radio__label span {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.color-radio__label input:checked + span::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #000000;
 }
 
 @media (max-width: 1439px) {
