@@ -827,6 +827,9 @@ button,
 
 .card {
   padding: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .card__item {
@@ -953,6 +956,70 @@ button,
   height: 20px;
   border-radius: 50%;
   border: 1px solid #000000;
+}
+
+.counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.counter input {
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  max-width: 80px;
+}
+
+.counter__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+
+.counter__discount-before,
+.counter__discount-after {
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: line-through;
+  color: #6e6e6e;
+}
+
+.counter__before,
+.counter__after {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.counter__count {
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.counter__btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.counter__btn--minus {
+  background: url("../../img/svg/icon-minus.svg");
+}
+
+.counter__btn--plus {
+  background: url("../../img/svg/icon-plus.svg");
 }
 
 @media (max-width: 1439px) {

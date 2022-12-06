@@ -8,9 +8,11 @@ const initCounter = () => {
 
         if (target.closest('.counter__btn')) {
           // получает значение input
-          let value = parseInt(target.closest('.counter').querySelector('.count').value, 10);
+          let value = parseInt(target.closest('.counter').querySelector('.counter__count').value, 10);
 
-          let price = target.closest('.counter').querySelector('.before').value;
+          let discount = target.closest('.counter').querySelector('.counter__discount-before').value;
+
+          let price = target.closest('.counter').querySelector('.counter__before').value;
 
           if (target.classList.contains('counter__btn--plus')) {
             value++;
@@ -24,8 +26,10 @@ const initCounter = () => {
             target.closest('.counter').querySelector('.counter__btn--minus').removeAttribute('disabled', 'disabled');
           }
 
-          let count = target.closest('.counter').querySelector('.count').value = value;
-          target.closest('.counter').querySelector('.after').value = count * price;
+          let count = target.closest('.counter').querySelector('.counter__count').value = value;
+
+          target.closest('.counter').querySelector('.counter__after').value = count * price;
+          target.closest('.counter').querySelector('.counter__discount-after').value = count * discount;
         }
       });
     });
