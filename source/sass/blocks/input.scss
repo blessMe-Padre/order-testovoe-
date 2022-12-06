@@ -1,0 +1,16 @@
+.input {}
+
+.input__field {
+  min-height: 45px;
+  padding: 0 16px;
+  border: 1px solid $color-quartz;
+  font-size: 16px;
+  line-height: 21px;
+  color: $color-default-black;
+}
+
+.input__field::placeholder {
+  font-size: 16px;
+  line-height: 21px;
+  color: $color-quartz;
+}

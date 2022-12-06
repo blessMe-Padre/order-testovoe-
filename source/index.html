@@ -90,7 +90,7 @@
 
         <form class="form" action="#" id="form">
           <div class="form__wrapper">
-            <div class="form__item">
+            <section class="form__item">
               <div class="form__header">
                 <h1 class="form__header-title">Оформление заказа</h1>
                 <span class="form__header-span">Есть аккаунт?</span>
@@ -195,24 +195,59 @@
 
                   </div>
                 </div>
-            </div>
-            </article>
+              </article>
+            </section>
 
+            <section class="form__order">
+              <h2 class="visually-hidden">Оформить заказ</h2>
+              <div class="order">
+                <ul class="order__list">
+                  <li class="order__item order__item--bold">Товары <span>24 500 ₽</span> </li>
+                  <li class="order__item order__item--bold order__item--red order__item--mb-small">Скидка <span>- 4 500
+                      ₽</span> </li>
+                  <li class="order__item order__item--fs-16 order__item--red order__item--mb-small">Акции <span>- 4 000
+                      ₽</span> </li>
+                  <li class="order__item order__item--fs-16 order__item--red">Промокод <span>- 500 ₽</span> </li>
+                  <li class="order__item  order__item--bold">Доставка <span>200 ₽</span> </li>
+                </ul>
 
+                <div class="order__get">
+                  <div class="order__get-wrapper">
+                    <p class="order__get-text">Получить товар со&nbsp;склада</p>
+                    <p class="order__get-subtext">Сроки получения могут измениться</p>
+                  </div>
+                  <div class="toggle">
+                    <label class="toggle__switch">
+                      <input class="visually-hidden" type="checkbox" name="storehouse">
+                      <span class="toggle__slider"></span>
+                    </label>
+                  </div>
+                </div>
+                <p class="order__get-total">Итого: <span>20 700 ₽</span></p>
+                <div class="input order__get-input">
+                  <label class="input__label">
+                    <input class="input__field" name="promo" type="text" placeholder="Введите промокод">
+                    <span>1B6D9FC - купон не найден</span>
+                  </label>
+                </div>
+                <button class="order__btn" type="submit">Оформить заказ</button>
+                <p class="order__policy">
+                  Оформить заказ
+                  Нажимая кнопку &laquo;Оформить заказ&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
+                  <a href="#">
+                    политикой конфиденциальности.
+                  </a>
 
+                </p>
+              </div>
+            </section>
 
           </div>
-          <label for="formName">Имя
-            <input type="text" name="name" id="formName">
-          </label>
-
-          <label for="formSurName">Фамилия
-            <input type="text" name="surName" id="formSurName">
-          </label>
+        </form>
       </div>
 
-      <button type="submit">отправить</button>
-      </form>
+
+
   </div>
   </main>
   <footer class="footer page-section-4">
