@@ -870,6 +870,10 @@ button,
 
 .size-radio__item {
   list-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .size-radio__label {
