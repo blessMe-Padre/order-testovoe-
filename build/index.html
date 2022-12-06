@@ -76,22 +76,124 @@
       </div>
     </header>
     <main>
-      <h1>title</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque repudiandae quos quis accusamus, sunt
-        voluptates iure, adipisci maxime harum animi culpa. Iure nihil optio ex dolores expedita minus? A neque ad
-        impedit quo corrupti eligendi labore illum deserunt perferendis!</p>
+      <div class="container">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--active" href="#">Оформление заказа</a>
+            </li>
+          </ul>
+        </div>
 
-      <form class="form" action="#" id="form">
-        <label for="formName">Имя
-          <input type="text" name="name" id="formName">
-        </label>
+        <form class="form" action="#" id="form">
+          <div class="form__wrapper">
+            <div class="form__item">
+              <div class="form__header">
+                <h1 class="form__header-title">Оформление заказа</h1>
+                <span class="form__header-span">Есть аккаунт?</span>
+                <a class="form__header-link" href="#">Войти</a>
+              </div>
 
-        <label for="formSurName">Фамилия
-          <input type="text" name="surName" id="formSurName">
-        </label>
+              <h2 class="form__total">3 товара на сумму 25 000 ₽</h2>
 
-        <button type="submit">отправить</button>
-      </form>
+              <article class="card">
+                <div class="card__item">
+                  <div class="card__img">
+                    <picture>
+                      <source srcset="img/content/card-img@1x.webp 1x, img/content/card-img@2x.webp 2x"
+                        type="image/webp">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <img src="img/content/card-img@1x.jpg" width="130" height="160"
+                        srcset="img/content/card-img@2x.jpg 2x" alt="Утепленная куртка женская Top Hills">
+                    </picture>
+                  </div>
+                  <div class="card__descriptions">
+                    <h3 class="card__descriptions-tile">Утепленная стеганная куртка женская Top Hills</h3>
+                    <p class="card__descriptions-text">Артикул <span>512-05</span></p>
+                    <p class="card__descriptions-text">Сезон<span>Осень-зима</span></p>
+
+                    <div class="size-radio">
+                      <ul class="size-radio__list">
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="xs" checked="checked">
+                            <span>xs</span>
+                          </label>
+                        </li>
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="s">
+                            <span>s</span>
+                          </label>
+                        </li>
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="m">
+                            <span>m</span>
+                          </label>
+                        </li class="size-radio__item">
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="l">
+                            <span>l</span>
+                          </label>
+                        </li>
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="xl">
+                            <span>xl</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <ul>
+                        <li>
+                          <label>
+                            <input type="radio" name="color" value="black">
+                            <span>xs</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="radio" name="color" value="blue">
+                            <span>s</span>
+                          </label>
+                        </li>
+                        <li>
+                          <label>
+                            <input type="radio" name="color" value="brown">
+                            <span>m</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card__counter"></div>
+              </article>
+
+
+
+
+            </div>
+            <label for="formName">Имя
+              <input type="text" name="name" id="formName">
+            </label>
+
+            <label for="formSurName">Фамилия
+              <input type="text" name="surName" id="formSurName">
+            </label>
+          </div>
+
+          <button type="submit">отправить</button>
+        </form>
+      </div>
     </main>
     <footer class="footer page-section-4">
       footer

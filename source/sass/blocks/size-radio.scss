@@ -1,0 +1,34 @@
+.size-radio {}
+
+.size-radio__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.size-radio__item {
+  list-style: none;
+}
+
+.size-radio__label {
+  cursor: pointer;
+
+  span {
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-default-black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-glacier-1;
+    border-radius: 6px;
+    margin-right: 5px;
+  }
+
+  input:checked+span {
+    color: $color-default-white;
+    background-color: $color-default-black;
+  }
+}

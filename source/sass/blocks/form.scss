@@ -1,0 +1,39 @@
+.form {}
+
+.form__wrapper {}
+
+.form__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 60px;
+
+  &-title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    color: $color-default-black;
+    margin: 0 20px 15px 0;
+  }
+
+  &-span {
+    line-height: 18px;
+    color: $color-quartz;
+    margin: 0 5px 15px 0;
+  }
+
+  &-link {
+    line-height: 18px;
+    color: $color-default-black;
+    margin-bottom: 15px;
+
+  }
+}
+
+.form__total {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $color-default-black;
+  margin: 0 0 30px 0;
+}
