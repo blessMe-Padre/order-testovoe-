@@ -1,6 +1,10 @@
 .form {}
 
-.form__wrapper {}
+.form__wrapper {
+  display: grid;
+  grid-template-columns: 60% 38%;
+  gap: 20px;
+}
 
 .form__header {
   display: flex;

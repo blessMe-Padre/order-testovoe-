@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="">
   <title>Тестовое задание</title>
+  <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -97,7 +98,7 @@
                 <a class="form__header-link" href="#">Войти</a>
               </div>
 
-              <h2 class="form__total">3 товара на сумму 25 000 ₽</h2>
+              <h2 class="form__total">3&nbsp;товара на&nbsp;сумму 25&nbsp;000&nbsp;₽</h2>
 
               <article class="card">
                 <div class="card__item">
@@ -184,13 +185,13 @@
                     <div class="counter__inner">
                       <button class="counter__btn counter__btn--minus" type="button">
                       </button>
-                      <input class="counter__count" type="text" name="quantity" value="2" size="5" disabled>
+                      <input class="counter__count" type="text" name="quantity" value="2" size="5" readonly>
                       <button class="counter__btn counter__btn--plus" type="button">
                       </button>
                     </div>
                     <div class="counter__wrapper">
                       <input class="counter__discount-after" type="text" value="24000" disabled>
-                      <input class="counter__after" type="text" name="total" value="20000" disabled>
+                      <input class="counter__after" type="text" name="total" value="20000" readonly>
                     </div>
 
                   </div>
@@ -227,7 +228,7 @@
                 <div class="input order__get-input">
                   <label class="input__label">
                     <input class="input__field" name="promo" type="text" placeholder="Введите промокод">
-                    <span>1B6D9FC - купон не найден</span>
+                    <span></span>
                   </label>
                 </div>
                 <button class="order__btn" type="submit">Оформить заказ</button>
@@ -240,6 +241,15 @@
 
                 </p>
               </div>
+            </section>
+
+            <section class="form__contact">
+              <h2 class="form__title">Контактные данные</h2>
+
+              <input type="text" id="surname" placeholder="Фамилия" autofocus required>
+              <br />
+              <input type="text" id="name" placeholder="Имя" required>
+              <br />
             </section>
 
           </div>
@@ -255,6 +265,8 @@
   </footer>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
