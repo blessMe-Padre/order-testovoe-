@@ -1,17 +1,56 @@
-.input {}
+.input-label {
+  position: relative;
+  width: 48%;
+}
 
-.input__field {
+.input-field {
+  display: inline-block;
   min-height: 45px;
   padding: 0 16px;
-  border: 1px solid $color-quartz;
+  border: 1px solid $color-glacier;
   font-size: 16px;
   line-height: 21px;
   color: $color-default-black;
   width: 100%;
+  margin-bottom: 20px;
+  transition: border $trans-default;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-quartz;
+  }
 }
 
-.input__field::placeholder {
+.input-field::placeholder {
   font-size: 16px;
   line-height: 21px;
   color: $color-quartz;
+}
+
+.input-span {
+  position: absolute;
+  top: -8px;
+  left: 17px;
+  padding: 0 5px;
+  background-color: $color-default-white;
+  opacity: 0;
+  transition: opacity $trans-default;
+}
+
+.input-field:focus~.input-span {
+  opacity: 1;
+}
+
+.input-textarea {
+  padding: 15px 20px;
+  min-height: 160px;
+  margin-bottom: 0;
+}
+
+.input-textarea-text {
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-quartz;
+  margin: 0;
+  padding-left: 20px;
 }

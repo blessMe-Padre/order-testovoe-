@@ -1,0 +1,43 @@
+.payment-radio {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.payment-radio__label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $color-quartz;
+    border-radius: 100%;
+  }
+}
+
+.payment-radio__span {
+  position: relative;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 30px;
+}
+
+
+input:checked+.payment-radio__span::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: $color-default-black;
+  border-radius: 100%;
+  transform: translate(43%, 40%);
+}
