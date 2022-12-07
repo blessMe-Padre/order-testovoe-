@@ -1,9 +1,57 @@
 const initMap = () => {
-
-
   ymaps.ready(init);
 
+
   function init() {
+
+
+
+
+    let myMap = new ymaps.Map('map', {
+      center: [55.751574, 37.573856],
+      zoom: 9,
+    }, {
+      searchControlProvider: 'yandex#search',
+    });
+
+    // Создаём макет содержимого.
+    let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    );
+
+    let myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+      hintContent: 'метка',
+      balloonContent: 'контент / описание',
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/pin.png',
+      // Размеры метки.
+      iconImageSize: [26, 39],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-24, -24],
+      // Смещение слоя с содержимым относительно слоя с картинкой.
+      iconContentOffset: [15, 15],
+      // Макет содержимого.
+      iconContentLayout: MyIconContentLayout
+    });
+
+    myMap.geoObjects
+      .add(myPlacemarkWithContent);
+
+
+
+
+
+
+
+
+
+
+
     // Подключаем поисковые подсказки к полю ввода.
     var suggestView = new ymaps.SuggestView('suggest'),
       map,
@@ -56,9 +104,9 @@ const initMap = () => {
         }
       }, function (e) {
         console.log(e)
-      })
-
+      });
     }
+
     function showResult(obj) {
       // Удаляем сообщение об ошибке, если найденный адрес совпадает с поисковым запросом.
       $('#suggest').removeClass('input_error');
@@ -95,17 +143,38 @@ const initMap = () => {
     }
 
     function createMap(state, caption) {
-      // Если карта еще не была создана, то создадим ее и добавим метку с адресом.
+      // Если карта еще не была с    // Создаём макет содержимого.
+      let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      );
+
       if (!map) {
+        myMap.destroy();
         map = new ymaps.Map('map', state);
         placemark = new ymaps.Placemark(
           map.getCenter(), {
           iconCaption: caption,
-          balloonContent: caption
+          balloonContent: caption,
         }, {
-          preset: 'islands#redDotIconWithCaption'
+          preset: 'islands#redDotIconWithCaption',
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#imageWithContent',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/pin.png',
+          // Размеры метки.
+          iconImageSize: [26, 39],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-24, -24],
+          // Смещение слоя с содержимым относительно слоя с картинкой.
+          iconContentOffset: [15, 15],
+          // Макет содержимого.
+          iconContentLayout: MyIconContentLayout
+
         });
         map.geoObjects.add(placemark);
+
         // Если карта есть, то выставляем новый центр карты и меняем данные и позицию метки в соответствии с найденным адресом.
       } else {
         map.setCenter(state.center, state.zoom);

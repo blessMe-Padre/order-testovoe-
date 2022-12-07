@@ -53,6 +53,7 @@ const initMapSecond = () => {
     myMap.geoObjects
       .add(myPlacemark)
       .add(myPlacemarkWithContent);
+
   });
 };
 
