@@ -32,15 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  $("#address").suggestions({
-    token: "66b9791ad59b7d04d364c17b8d9ebd2aa5ec663f",
-    type: "ADDRESS",
-    /* Вызывается, когда пользователь выбирает одну из подсказок */
-    onSelect: function (suggestion) {
-      console.log(suggestion);
-    }
-  });
-
   $("#email").suggestions({
     token: "66b9791ad59b7d04d364c17b8d9ebd2aa5ec663f",
     type: "EMAIL",

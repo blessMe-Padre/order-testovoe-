@@ -1,6 +1,6 @@
 // Функция ymaps.ready() будет вызвана, когда
 // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-const initMap = () => {
+const initMapSecond = () => {
   ymaps.ready(function () {
     let myMap = new ymaps.Map('map', {
       center: [55.751574, 37.573856],
@@ -56,4 +56,4 @@ const initMap = () => {
   });
 };
 
-export { initMap }
+export { initMapSecond }
