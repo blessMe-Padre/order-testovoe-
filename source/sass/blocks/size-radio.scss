@@ -26,10 +26,20 @@
     background-color: $color-glacier-1;
     border-radius: 6px;
     margin-right: 5px;
+    transition: background-color $trans-default;
+
+    &:hover {
+      background-color: $color-glacier;
+    }
   }
 
   input:checked+span {
     color: $color-default-white;
     background-color: $color-default-black;
+  }
+
+  input:disabled+span {
+    color: $color-glacier;
+    background-color: $color-glacier-1;
   }
 }

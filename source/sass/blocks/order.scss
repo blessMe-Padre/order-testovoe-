@@ -92,6 +92,11 @@
   &:focus {
     background-color: $color-quartz;
   }
+
+  &:active {
+    color: $color-quartz;
+    background-color: $color-glacier;
+  }
 }
 
 .order__policy {

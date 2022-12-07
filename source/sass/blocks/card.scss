@@ -1,6 +1,10 @@
 .card {
+  padding: 25px 0;
   display: flex;
   flex-wrap: wrap;
+  border-top: 1px solid $color-glacier;
+  border-bottom: 1px solid $color-glacier;
+  margin-bottom: 25px;
 }
 
 .card__item {

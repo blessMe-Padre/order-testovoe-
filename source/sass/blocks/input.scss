@@ -25,11 +25,6 @@
   transition: border $trans-default;
   outline: none;
 
-  &:hover,
-  &:focus {
-    border: 1px solid $color-quartz;
-  }
-
   &:not(:focus):invalid {
     border-color: $color-glacier;
   }
@@ -44,6 +39,14 @@
 
   &:not(:focus):valid {
     border-color: $color-glacier;
+  }
+
+  &:not(:focus):valid:hover {
+    border-color: $color-default-black;
+  }
+
+  &:not(:focus):invalid:hover {
+    border-color: $color-default-black;
   }
 
 }

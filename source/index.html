@@ -202,6 +202,121 @@
                   </div>
                 </div>
               </article>
+
+              <div class="remove">
+                <div class="remove__item">
+                  <p class="remove__item-text">
+                    Товар <strong>Наименование товара</strong> был удален из&nbsp;корзины.
+                  </p>
+                  <a class="link" href="#">Восстановить</a>
+                </div>
+                <div class="remove__item">
+                  <button class="remove__btn" type="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="img/sprite_auto.svg#icon-delete"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <article class="card">
+                <div class="card__item">
+                  <div class="card__img">
+                    <picture>
+                      <source srcset="img/content/card-img@1x.webp 1x, img/content/card-img@2x.webp 2x"
+                        type="image/webp">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <img src="img/content/card-img@1x.jpg" width="130" height="160"
+                        srcset="img/content/card-img@2x.jpg 2x" alt="Утепленная куртка женская Top Hills">
+                    </picture>
+                  </div>
+                  <div class="card__descriptions">
+                    <h3 class="card__descriptions-tile">Утепленная стеганная куртка женская Top Hills</h3>
+                    <p class="card__descriptions-text">Артикул <span>512-05</span></p>
+                    <p class="card__descriptions-text">Сезон<span>Осень-зима</span></p>
+
+                    <div class="size-radio">
+                      <ul class="size-radio__list">
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="xs" checked>
+                            <span>xs</span>
+                          </label>
+                        </li>
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="s">
+                            <span>s</span>
+                          </label>
+                        </li>
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="m">
+                            <span>m</span>
+                          </label>
+                        </li class="size-radio__item">
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="l" disabled>
+                            <span>l</span>
+                          </label>
+                        </li>
+                        <li class="size-radio__item">
+                          <label class="size-radio__label">
+                            <input class="visually-hidden" type="radio" name="size" value="xl" disabled>
+                            <span>xl</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="color-radio">
+                      <ul class="color-radio__list">
+                        <li class="color-radio__item">
+                          <label class="color-radio__label">
+                            <input class="visually-hidden" type="radio" name="color" value="black">
+                            <span class="color-radio__grey"></span>
+                          </label>
+                        </li>
+                        <li class="color-radio__item">
+                          <label class="color-radio__label">
+                            <input class="visually-hidden" type="radio" name="color" value="blue">
+                            <span class="color-radio__blue"></span>
+                          </label>
+                        </li>
+                        <li class="color-radio__item">
+                          <label class="color-radio__label">
+                            <input class="visually-hidden" type="radio" name="color" value="brown" checked>
+                            <span class="color-radio__brown"></span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card__counter">
+                  <div class="counter">
+                    <div class="counter__wrapper">
+                      <input class="counter__discount-before" type="text" value="12000" disabled>
+                      <input class="counter__before" type="text" value="10000" disabled>
+                    </div>
+                    <div class="counter__inner">
+                      <button class="counter__btn counter__btn--minus" type="button">
+                      </button>
+                      <input class="counter__count" type="text" name="quantity" value="2" size="5" readonly>
+                      <button class="counter__btn counter__btn--plus" type="button">
+                      </button>
+                    </div>
+                    <div class="counter__wrapper">
+                      <input class="counter__discount-after" type="text" value="24000" disabled>
+                      <input class="counter__after" type="text" name="total" value="20000" readonly>
+                    </div>
+
+                  </div>
+                </div>
+              </article>
+
             </section>
 
             <section class="form__order">
@@ -274,8 +389,7 @@
 
               <div class="form__contact-address" id="header">
                 <label class="input-label">
-                  <input class="input input-field input-address" id="suggest" name="address" type="text"
-                    placeholder="Введите адрес" />
+                  <input class="input input-field input-address" id="suggest" type="text" placeholder="Введите адрес" />
                   <span class="input-span input-span--address">Адрес</span>
                   <button class="input-label__btn" type="submit" id="button">
                     <svg width="20" height="20">

@@ -1,0 +1,28 @@
+.remove {
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $color-glacier-1;
+  margin-bottom: 25px;
+}
+
+.remove__item {
+  display: flex;
+  align-items: center;
+}
+
+.remove__item-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: $color-quartz;
+  margin: 0 25px 0 0;
+}
+
+.remove__btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
