@@ -616,6 +616,10 @@ button,
   transition: none !important;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 .container {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1414,6 +1418,7 @@ input:checked + .payment-radio__span::after {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
+    z-index: 1;
   }
 
   .nav__list {

@@ -3,7 +3,6 @@
 import { initNavToggle } from './modules/nav-toggle';
 import { initForm } from './modules/form';
 import { initCounter } from './modules/counter';
-// import { initMapSecond } from './modules/ya';
 import { initMap } from './modules/yandex';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -12,7 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initNavToggle();
   initForm();
   initCounter();
-  // initMapSecond();
   initMap();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
