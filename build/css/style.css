@@ -856,12 +856,6 @@ button,
   flex-wrap: wrap;
 }
 
-.input__span {
-  font-size: 12px;
-  line-height: 15px;
-  color: #6e6e6e;
-}
-
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1242,6 +1236,15 @@ button,
   width: 48%;
 }
 
+.input-label__btn {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
 .input-field {
   display: inline-block;
   min-height: 45px;
@@ -1255,11 +1258,28 @@ button,
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
+  outline: none;
 }
 
 .input-field:hover,
 .input-field:focus {
   border: 1px solid #6e6e6e;
+}
+
+.input-field:not(:focus):invalid {
+  border-color: #c8c8c8;
+}
+
+.input-field:invalid {
+  border-color: #d92c2c;
+}
+
+.input-field:focus:invalid {
+  border-color: #d92c2c;
+}
+
+.input-field:not(:focus):valid {
+  border-color: #c8c8c8;
 }
 
 .input-field::-webkit-input-placeholder {
@@ -1294,14 +1314,18 @@ button,
 
 .input-span {
   position: absolute;
-  top: -8px;
-  left: 17px;
+  top: -13px;
+  left: 12px;
   padding: 0 5px;
   background-color: #ffffff;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+
+.input-span--address {
+  top: -28px;
 }
 
 .input-field:focus ~ .input-span {
@@ -1372,6 +1396,21 @@ input:checked + .payment-radio__span::after {
   -webkit-transform: translate(43%, 40%);
   -ms-transform: translate(43%, 40%);
   transform: translate(43%, 40%);
+}
+
+.suggestions-suggestion {
+  padding: 15px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.suggestions-hint {
+  padding: 15px 20px;
+}
+
+.suggestions-selected {
+  background: #f1f1f1;
 }
 
 @media (max-width: 1439px) {

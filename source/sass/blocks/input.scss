@@ -1,6 +1,15 @@
 .input-label {
   position: relative;
   width: 48%;
+
+  &__btn {
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
 }
 
 .input-field {
@@ -14,11 +23,29 @@
   width: 100%;
   margin-bottom: 20px;
   transition: border $trans-default;
+  outline: none;
 
   &:hover,
   &:focus {
     border: 1px solid $color-quartz;
   }
+
+  &:not(:focus):invalid {
+    border-color: $color-glacier;
+  }
+
+  &:invalid {
+    border-color: $color-torch-red;
+  }
+
+  &:focus:invalid {
+    border-color: $color-torch-red;
+  }
+
+  &:not(:focus):valid {
+    border-color: $color-glacier;
+  }
+
 }
 
 .input-field::placeholder {
@@ -29,12 +56,16 @@
 
 .input-span {
   position: absolute;
-  top: -8px;
-  left: 17px;
+  top: -13px;
+  left: 12px;
   padding: 0 5px;
   background-color: $color-default-white;
   opacity: 0;
   transition: opacity $trans-default;
+
+  &--address {
+    top: -28px;
+  }
 }
 
 .input-field:focus~.input-span {
