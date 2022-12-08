@@ -40,18 +40,17 @@
             <li class="icon-list__item">
               <a href="#">
                 <svg width="20" height="20">
-                  <use xlink:href="img/sprite_auto.svg#icon-user"></use>
+                  <use xlink:href="img/sprite_auto.svg#icon-search"></use>
                 </svg>
               </a>
             </li>
             <li class="icon-list__item">
               <a href="#">
                 <svg width="20" height="20">
-                  <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+                  <use xlink:href="img/sprite_auto.svg#icon-user"></use>
                 </svg>
               </a>
             </li>
-
             <li class="icon-list__item">
               <a href="#">
                 <svg width="20" height="20">
@@ -181,8 +180,8 @@
                 <div class="card__counter">
                   <div class="counter">
                     <div class="counter__wrapper">
-                      <input class="counter__discount-before" type="text" value="12000" disabled>
-                      <input class="counter__before" type="text" value="10000" disabled>
+                      <input class="counter__discount-before" size="6" type="text" value="12000" disabled>
+                      <input class="counter__before" size="6" type="text" value="10000" disabled>
                     </div>
                     <div class="counter__inner">
                       <button class="counter__btn counter__btn--minus" type="button">
@@ -192,10 +191,14 @@
                       </button>
                     </div>
                     <div class="counter__wrapper">
-                      <input class="counter__discount-after" type="text" value="24000" disabled>
-                      <input class="counter__after" type="text" name="total" value="20000" readonly>
+                      <input class="counter__discount-after" size="6" type="text" value="24000" disabled>
+                      <input class="counter__after" size="6" type="text" name="total" value="20000" readonly>
                     </div>
-
+                    <button class="counter__btn counter__btn--top" type="button">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite_auto.svg#icon-delete"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -220,17 +223,17 @@
                 <div class="card__item">
                   <div class="card__img">
                     <picture>
-                      <source srcset="img/content/card-img@1x.webp 1x, img/content/card-img@2x.webp 2x"
+                      <source srcset="img/content/card-img-2@1x.webp 1x, img/content/card-img-2@2x.webp 2x"
                         type="image/webp">
                       <!-- 1х: 130px; 2x: 260px -->
-                      <img src="img/content/card-img@1x.jpg" width="130" height="160"
-                        srcset="img/content/card-img@2x.jpg 2x" alt="Утепленная куртка женская Top Hills">
+                      <img src="img/content/card-img-2@1x.jpg" width="130" height="160"
+                        srcset="img/content/card-img-2@2x.jpg 2x" alt="Утепленная куртка женская Top Hills">
                     </picture>
                   </div>
                   <div class="card__descriptions">
-                    <h3 class="card__descriptions-tile">Утепленная стеганная куртка женская Top Hills</h3>
-                    <p class="card__descriptions-text">Артикул <span>512-05</span></p>
-                    <p class="card__descriptions-text">Сезон<span>Осень-зима</span></p>
+                    <h3 class="card__descriptions-tile">Вязанная шапка Zolla</h3>
+                    <p class="card__descriptions-text">Артикул <span>891-256</span></p>
+                    <p class="card__descriptions-text">Сезон<span>Демисезон</span></p>
 
                     <div class="size-radio">
                       <ul class="size-radio__list">
@@ -295,21 +298,25 @@
                 <div class="card__counter">
                   <div class="counter">
                     <div class="counter__wrapper">
-                      <input class="counter__discount-before" type="text" value="12000" disabled>
-                      <input class="counter__before" type="text" value="10000" disabled>
+                      <input class="counter__discount-before visually-hidden" type="text" value="500" disabled>
+                      <input class="counter__before" size="6" type="text" value="500" disabled>
                     </div>
                     <div class="counter__inner">
                       <button class="counter__btn counter__btn--minus" type="button">
                       </button>
-                      <input class="counter__count" type="text" name="quantity" value="2" size="5" readonly>
+                      <input class="counter__count" type="text" name="quantity" value="1" size="5" readonly>
                       <button class="counter__btn counter__btn--plus" type="button">
                       </button>
                     </div>
                     <div class="counter__wrapper">
-                      <input class="counter__discount-after" type="text" value="24000" disabled>
-                      <input class="counter__after" type="text" name="total" value="20000" readonly>
+                      <input class="counter__discount-after visually-hidden" type="text" value="500" disabled>
+                      <input class="counter__after" size="6" type="text" name="total" value="500" readonly>
                     </div>
-
+                    <button class="counter__btn counter__btn--top" type="button">
+                      <svg width="20" height="20">
+                        <use xlink:href="img/sprite_auto.svg#icon-delete"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </article>
@@ -438,11 +445,17 @@
             на&nbsp;наши новости</h2>
           <div class="footer__input">
             <label class="input-label">
-              <input class="input-field" type="text" placeholder="example@mail.ru">
+              <input class="input-field input-padding" type="text" placeholder="example@mail.ru">
               <span class="input-span">Email</span>
             </label>
+            <button class="input-btn" type="submit">
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+              </svg>
+              Подписаться
+            </button>
           </div>
-          <p class="policy">
+          <p class="policy policy--footer">
             Нажимая кнопку &laquo;Подписаться&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
             <a href="#">
               политикой конфиденциальности.
