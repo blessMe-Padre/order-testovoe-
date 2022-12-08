@@ -21,3 +21,11 @@
     opacity: 1;
   }
 }
+
+.link--light {
+  color: $color-quartz;
+
+  &::before {
+    background-color: $color-quartz;
+  }
+}

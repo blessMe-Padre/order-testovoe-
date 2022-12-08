@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/style.min.css">
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a43e93d7-cdbe-46d9-a1eb-6825a62107de"></script>
-  <script src="https://yandex.st/jquery/2.2.3/jquery.min.js"></script>
 </head>
 
 <body class="page__body">
@@ -101,7 +100,7 @@
                 <a class="form__header-link" href="#">Войти</a>
               </div>
 
-              <h2 class="form__total">3&nbsp;товара на&nbsp;сумму 25&nbsp;000&nbsp;₽</h2>
+              <h2 class="title form__total">3&nbsp;товара на&nbsp;сумму 25&nbsp;000&nbsp;₽</h2>
 
               <article class="card">
                 <div class="card__item">
@@ -350,19 +349,18 @@
                   </label>
                 </div>
                 <button class="order__btn" type="submit">Оформить заказ</button>
-                <p class="order__policy">
+                <p class="policy">
                   Оформить заказ
                   Нажимая кнопку &laquo;Оформить заказ&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
                   <a href="#">
                     политикой конфиденциальности.
                   </a>
-
                 </p>
               </div>
             </section>
 
             <section class="form__contact">
-              <h2 class="form__title">Контактные данные</h2>
+              <h2 class="title form__title">Контактные данные</h2>
               <div class="form__contact-input">
                 <label class="input-label">
                   <input class="input-field" type="text" id="name" placeholder="Имя" required>
@@ -397,7 +395,7 @@
                 </button>
               </div>
 
-              <h2 class="form__title">Оплата</h2>
+              <h2 class="title form__title">Оплата</h2>
               <div class="payment-radio">
                 <label class="payment-radio__label">
                   <input class="visually-hidden" type="radio" name="payment">
@@ -413,7 +411,7 @@
                 </label>
               </div>
 
-              <h2 class="form__title">Комментарий к&nbsp;заказу</h2>
+              <h2 class="title form__title">Комментарий к&nbsp;заказу</h2>
 
               <textarea class="input-field input-textarea" placeholder="Комментарий к заказу" name="comment"></textarea>
               <p class="input-textarea-text">
@@ -429,13 +427,91 @@
         </form>
 
       </div>
-
-
     </main>
   </div>
 
-  <footer class="footer page-section-4">
-    footer
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__block">
+          <h2 class="title footer__title">Скидка&nbsp;10% за&nbsp;подписку
+            на&nbsp;наши новости</h2>
+          <div class="footer__input">
+            <label class="input-label">
+              <input class="input-field" type="text" placeholder="example@mail.ru">
+              <span class="input-span">Email</span>
+            </label>
+          </div>
+          <p class="policy">
+            Нажимая кнопку &laquo;Подписаться&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
+            <a href="#">
+              политикой конфиденциальности.
+            </a>
+          </p>
+        </div>
+
+        <div class="footer__link">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="link">Каталог</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link">О компании</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link">Магазины</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link">Новости</a>
+            </li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="link">Оплата и доставка</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link">Условия возврата</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link">Бонусная система</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link">Подарочный сертификат</a>
+            </li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="link" target="_blank">Telegram</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link" target="_blank">WhatsApp</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link" target="_blank">Youtube</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="link" target="_blank">VK</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="footer__row">
+        <li class="footer__row-item footer__row-item--light">
+          © All rights reserved
+        </li>
+        <li class="footer__row-item">
+          <a href="#" class="link link--light">Публичная оферта</a>
+        </li>
+        <li class="footer__row-item">
+          <a href="#" class="link link--light">Политика конфиденциальности</a>
+        </li>
+        <li class="footer__row-item">
+          Сделано в&nbsp;студии
+          <img src="./img/logo-5.png" width="90" height="21" alt="логотип 5 углов">
+        </li>
+      </ul>
+    </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
