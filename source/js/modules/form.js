@@ -1,3 +1,5 @@
+import { initPopup } from './popup';
+
 const initForm = () => {
 
   const { form } = document.forms;
@@ -11,7 +13,7 @@ const initForm = () => {
      */
     const formData = new FormData(form);
     const values = Object.fromEntries(formData.entries());
-
+    initPopup();
     console.log(values);
   };
 

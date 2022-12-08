@@ -100,3 +100,15 @@
     margin-right: 10px;
   }
 }
+
+.input-field--green {
+  border-color: $color-tangerine;
+
+  &:focus:valid {
+    border-color: $color-tangerine;
+  }
+
+  &:not(:focus):valid {
+    border-color: $color-tangerine;
+  }
+}

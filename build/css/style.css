@@ -1384,6 +1384,33 @@ button,
   background-color: #c8c8c8;
 }
 
+.order__get-input {
+  position: relative;
+}
+
+.order__input-btn {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.order__get-span {
+  position: absolute;
+  bottom: 4px;
+  left: 2px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #007e06;
+}
+
 .toggle {
   margin-top: 6px;
   display: inline-block;
@@ -1560,6 +1587,18 @@ button,
   margin-right: 10px;
 }
 
+.input-field--green {
+  border-color: #007e06;
+}
+
+.input-field--green:focus:valid {
+  border-color: #007e06;
+}
+
+.input-field--green:not(:focus):valid {
+  border-color: #007e06;
+}
+
 .payment-radio {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1625,6 +1664,65 @@ input:checked + .payment-radio__span::after {
 
 .suggestions-selected {
   background: #f1f1f1;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 16, 27, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 70;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__body {
+  width: 100%;
+  min-height: 100%;
+  padding: 30px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.popup__content {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 500px;
+  min-height: 200px;
+  padding: 37px;
+  color: #ffffff;
+  background-color: #106da2;
+  border-radius: 5px;
+}
+
+.popup__title {
+  color: #ffffff;
+}
+
+.popup__btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .footer {

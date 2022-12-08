@@ -97,3 +97,30 @@
     background-color: $color-glacier;
   }
 }
+
+.order__get-input {
+  position: relative;
+}
+
+.order__input-btn {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: $color-default-black;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.order__get-span {
+  position: absolute;
+  bottom: 4px;
+  left: 2px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-tangerine;
+}
