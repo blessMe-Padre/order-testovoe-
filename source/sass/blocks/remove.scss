@@ -1,15 +1,23 @@
 .remove {
-  padding: 12px 22px;
+  padding: 12px 60px 12px 22px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
   background-color: $color-glacier-1;
   margin-bottom: 25px;
+  position: relative;
+
+  @media(max-width: 634px) {
+    display: block;
+  }
+
+  @media(max-width: 634px) {
+    padding: 12px 30px 12px 22px;
+  }
 }
 
 .remove__item {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -19,9 +27,20 @@
   line-height: 21px;
   color: $color-quartz;
   margin: 0 25px 0 0;
+
+  @media(max-width: 634px) {
+    margin-bottom: 10px;
+  }
+
+  @media(max-width: 634px) {
+    margin: 0 0 10px 0;
+  }
 }
 
 .remove__btn {
+  position: absolute;
+  top: 12px;
+  right: 5px;
   cursor: pointer;
   background: transparent;
   border: none;

@@ -20,6 +20,13 @@
   margin-right: 30px;
   padding: 5px 10px;
   width: 153px;
+
+
+  @media(max-width: 420px) {
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 140px;
+  }
 }
 
 .counter__discount-before,

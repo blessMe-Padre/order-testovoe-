@@ -95,8 +95,10 @@
             <section class="form__item">
               <div class="form__header">
                 <h1 class="form__header-title">Оформление заказа</h1>
-                <span class="form__header-span">Есть аккаунт?</span>
-                <a class="form__header-link" href="#">Войти</a>
+                <div class="form__header-wrapper">
+                  <span class="form__header-span">Есть аккаунт?</span>
+                  <a class="form__header-link" href="#">Войти</a>
+                </div>
               </div>
 
               <h2 class="title form__total">3&nbsp;товара на&nbsp;сумму 25&nbsp;000&nbsp;₽</h2>
@@ -112,8 +114,8 @@
                         srcset="img/content/card-img@2x.jpg 2x" alt="Утепленная куртка женская Top Hills">
                     </picture>
                   </div>
+                  <h3 class="card__descriptions-tile">Утепленная стеганная куртка женская Top Hills</h3>
                   <div class="card__descriptions">
-                    <h3 class="card__descriptions-tile">Утепленная стеганная куртка женская Top Hills</h3>
                     <p class="card__descriptions-text">Артикул <span>512-05</span></p>
                     <p class="card__descriptions-text">Сезон<span>Осень-зима</span></p>
 
@@ -194,13 +196,14 @@
                       <input class="counter__discount-after" size="6" type="text" value="24000" disabled>
                       <input class="counter__after" size="6" type="text" name="total" value="20000" readonly>
                     </div>
-                    <button class="counter__btn counter__btn--top" type="button">
-                      <svg width="20" height="20">
-                        <use xlink:href="img/sprite_auto.svg#icon-delete"></use>
-                      </svg>
-                    </button>
                   </div>
                 </div>
+
+                <button class="card__btn" type="button">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite_auto.svg#icon-delete"></use>
+                  </svg>
+                </button>
               </article>
 
               <div class="remove">
@@ -208,9 +211,9 @@
                   <p class="remove__item-text">
                     Товар <strong>Наименование товара</strong> был удален из&nbsp;корзины.
                   </p>
-                  <a class="link" href="#">Восстановить</a>
                 </div>
                 <div class="remove__item">
+                  <a class="link" href="#">Восстановить</a>
                   <button class="remove__btn" type="button">
                     <svg width="20" height="20">
                       <use xlink:href="img/sprite_auto.svg#icon-delete"></use>
@@ -230,8 +233,8 @@
                         srcset="img/content/card-img-2@2x.jpg 2x" alt="Утепленная куртка женская Top Hills">
                     </picture>
                   </div>
+                  <h3 class="card__descriptions-tile">Вязанная шапка Zolla</h3>
                   <div class="card__descriptions">
-                    <h3 class="card__descriptions-tile">Вязанная шапка Zolla</h3>
                     <p class="card__descriptions-text">Артикул <span>891-256</span></p>
                     <p class="card__descriptions-text">Сезон<span>Демисезон</span></p>
 
@@ -312,13 +315,14 @@
                       <input class="counter__discount-after visually-hidden" type="text" value="500" disabled>
                       <input class="counter__after" size="6" type="text" name="total" value="500" readonly>
                     </div>
-                    <button class="counter__btn counter__btn--top" type="button">
-                      <svg width="20" height="20">
-                        <use xlink:href="img/sprite_auto.svg#icon-delete"></use>
-                      </svg>
-                    </button>
                   </div>
                 </div>
+
+                <button class="card__btn" type="button">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite_auto.svg#icon-delete"></use>
+                  </svg>
+                </button>
               </article>
 
             </section>
@@ -367,72 +371,74 @@
             </section>
 
             <section class="form__contact">
-              <h2 class="title form__title">Контактные данные</h2>
-              <div class="form__contact-input">
-                <label class="input-label">
-                  <input class="input-field" type="text" id="name" placeholder="Имя" required>
-                  <span class="input-span">Имя</span>
-                </label>
-                <label class="input-label">
-                  <input class="input-field" type="text" id="surname" placeholder="Фамилия" required>
-                  <span class="input-span">Фамилия</span>
-                </label>
+              <div class="form__contact-data">
+                <h2 class="title form__title">Контактные данные</h2>
+                <div class="form__contact-input">
+                  <label class="input-label">
+                    <input class="input-field" type="text" id="name" placeholder="Имя" required>
+                    <span class="input-span">Имя</span>
+                  </label>
+                  <label class="input-label">
+                    <input class="input-field" type="text" id="surname" placeholder="Фамилия" required>
+                    <span class="input-span">Фамилия</span>
+                  </label>
+                </div>
+                <div class="form__contact-input">
+                  <label class="input-label">
+                    <input class="input-field" type="tel" name="tel" placeholder="Телефон" title="+79991234567"
+                      pattern="^\+?[\s\-\(\)0-9]{7,19}$" required>
+                    <span class="input-span">Телефон</span>
+                  </label>
+                  <label class="input-label">
+                    <input class="input-field" type="text" id="email" placeholder="email" name="email" required>
+                    <span class="input-span">Email</span>
+                  </label>
+                </div>
+                <div class="form__contact-address" id="header">
+                  <label class="input-label">
+                    <input class="input input-field input-address" id="suggest" type="text" placeholder="Введите адрес">
+                    <span class="input-span input-span--address">Адрес</span>
+                  </label>
+                  <button class="input-btn" type="submit" id="button">
+                    <svg width="20" height="20">
+                      <use xlink:href="img/sprite_auto.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="form__contact-input">
-                <label class="input-label">
-                  <input class="input-field" type="tel" name="tel" placeholder="Телефон" title="+79991234567"
-                    pattern="^\+?[\s\-\(\)0-9]{7,19}$" required>
-                  <span class="input-span">Телефон</span>
-                </label>
-                <label class="input-label">
-                  <input class="input-field" type="text" id="email" placeholder="email" name="email" required>
-                  <span class="input-span">Email</span>
-                </label>
-              </div>
-
-              <div class="form__contact-address" id="header">
-                <label class="input-label">
-                  <input class="input input-field input-address" id="suggest" type="text" placeholder="Введите адрес">
-                  <span class="input-span input-span--address">Адрес</span>
-                </label>
-                <button class="input-btn" type="submit" id="button">
-                  <svg width="20" height="20">
-                    <use xlink:href="img/sprite_auto.svg#icon-search"></use>
-                  </svg>
-                </button>
-              </div>
-
-              <h2 class="title form__title">Оплата</h2>
-              <div class="payment-radio">
-                <label class="payment-radio__label">
-                  <input class="visually-hidden" type="radio" name="payment">
-                  <span class="payment-radio__span">Наличными курьеру</span>
-                </label>
-                <label class="payment-radio__label">
-                  <input class="visually-hidden" type="radio" name="payment">
-                  <span class="payment-radio__span">Картой курьеру</span>
-                </label>
-                <label class="payment-radio__label">
-                  <input class="visually-hidden" type="radio" name="payment">
-                  <span class="payment-radio__span">Картой онлайн</span>
-                </label>
+              <div class="form__map">
+                <div id="map" class="form__map-map"></div>
               </div>
 
-              <h2 class="title form__title">Комментарий к&nbsp;заказу</h2>
+              <div class="form__contact-payment">
+                <h2 class="title form__title">Оплата</h2>
+                <div class="payment-radio">
+                  <label class="payment-radio__label">
+                    <input class="visually-hidden" type="radio" name="payment">
+                    <span class="payment-radio__span">Наличными курьеру</span>
+                  </label>
+                  <label class="payment-radio__label">
+                    <input class="visually-hidden" type="radio" name="payment">
+                    <span class="payment-radio__span">Картой курьеру</span>
+                  </label>
+                  <label class="payment-radio__label">
+                    <input class="visually-hidden" type="radio" name="payment">
+                    <span class="payment-radio__span">Картой онлайн</span>
+                  </label>
+                </div>
+              </div>
 
-              <textarea class="input-field input-textarea" placeholder="Комментарий к заказу" name="comment"></textarea>
-              <p class="input-textarea-text">
-                Использовано 0/142 символов
-              </p>
+              <div class="form__contact-comment">
+                <h2 class="title form__title">Комментарий к&nbsp;заказу</h2>
+                <textarea class="input-field input-textarea" placeholder="Комментарий к заказу"
+                  name="comment"></textarea>
+                <p class="input-textarea-text">
+                  Использовано 0/142 символов
+                </p>
+              </div>
             </section>
-
-            <div class="form__map">
-              <div id="map" style="height: 450px;"></div>
-            </div>
           </div>
-
         </form>
-
       </div>
     </main>
   </div>
