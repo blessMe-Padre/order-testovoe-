@@ -2,7 +2,7 @@ const initNavToggle = () => {
   const nav = document.querySelector('.nav');
   const body = document.querySelector('.page__body');
 
-  const button = document.querySelector('.nav__button');
+  const button = document.querySelector('.nav-button');
   button.addEventListener('click', () => {
     nav.classList.toggle('is-active');
     button.classList.toggle('is-active');

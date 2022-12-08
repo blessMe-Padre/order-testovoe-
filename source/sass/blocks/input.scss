@@ -1,15 +1,6 @@
 .input-label {
   position: relative;
   width: 48%;
-
-  &__btn {
-    position: absolute;
-    top: -5px;
-    right: 20px;
-    cursor: pointer;
-    border: none;
-    background: transparent;
-  }
 }
 
 .input-field {
@@ -87,4 +78,14 @@
   color: $color-quartz;
   margin: 0;
   padding-left: 20px;
+}
+
+
+.input-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
 }

@@ -13,7 +13,7 @@
     height: 100%;
     overflow: auto;
     transform: translate(-110%);
-    background-color: $color-glacier-1;
+    background-color: $color-alice-blue;
     padding: 30px 20px;
 
     &.is-active {
@@ -50,15 +50,7 @@
   }
 }
 
-
-.nav__link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: $color-default-black;
-}
-
-.nav__button {
+.nav-button {
   display: none;
 
   @include vp-767 {
