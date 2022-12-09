@@ -814,15 +814,34 @@ button,
 .breadcrumbs__item:not(:last-child) ::before {
   content: "/";
   position: absolute;
-  top: 6px;
+  top: 0;
   right: -13px;
 }
 
 .breadcrumbs__link {
+  position: relative;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   color: #6e6e6e;
+}
+
+.breadcrumbs__link::after {
+  position: absolute;
+  content: "";
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.breadcrumbs__link:hover::after {
+  opacity: 1;
 }
 
 .breadcrumbs__link--active {
@@ -1040,6 +1059,13 @@ button,
   border: none;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.card__btn:hover {
+  opacity: 0.4;
 }
 
 .remove {
@@ -1283,6 +1309,13 @@ button,
   border: none;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.counter__btn:hover {
+  opacity: 0.4;
 }
 
 .counter__btn--minus {
@@ -1609,6 +1642,13 @@ button,
   align-items: center;
   color: #000000;
   font-weight: bold;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.input-btn:hover {
+  opacity: 0.4;
 }
 
 .input-btn svg {
