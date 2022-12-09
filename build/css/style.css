@@ -1615,6 +1615,14 @@ button,
   margin-right: 10px;
 }
 
+.input-email {
+  padding: 0 155px 0 16px;
+}
+
+.input-address {
+  padding: 0 65px 0 16px;
+}
+
 .input-field--green {
   border-color: #007e06;
 }
@@ -1656,6 +1664,13 @@ button,
   height: 22px;
   border: 1px solid #6e6e6e;
   border-radius: 100%;
+  -webkit-transition: border 0.3s ease;
+  -o-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+}
+
+.payment-radio__label:hover::before {
+  border: 1px solid #c8c8c8;
 }
 
 .payment-radio__span {
@@ -2302,6 +2317,10 @@ input:checked + .payment-radio__span::after {
 
   .input-btn {
     right: 0;
+  }
+
+  .input-email {
+    padding: 0 135px 0 16px;
   }
 
   .input-address {

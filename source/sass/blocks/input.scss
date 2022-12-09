@@ -127,7 +127,17 @@
   }
 }
 
+.input-email {
+  padding: 0 155px 0 16px;
+
+  @media(max-width: 420px) {
+    padding: 0 135px 0 16px;
+  }
+}
+
 .input-address {
+  padding: 0 65px 0 16px;
+
   @media(max-width: 420px) {
     padding: 0 50px 0 16px;
   }

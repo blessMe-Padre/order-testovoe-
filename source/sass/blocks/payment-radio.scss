@@ -19,6 +19,13 @@
     height: 22px;
     border: 1px solid $color-quartz;
     border-radius: 100%;
+    transition: border $trans-default;
+  }
+}
+
+.payment-radio__label:hover {
+  &::before {
+    border: 1px solid $color-glacier;
   }
 }
 

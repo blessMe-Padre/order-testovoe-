@@ -9,7 +9,7 @@ const initForm = () => {
 
     /**
      * FIXME:
-     * конструктор FormData (только валидные значение формы)
+     * скрыть токен
      */
     const formData = new FormData(form);
     const values = Object.fromEntries(formData.entries());
