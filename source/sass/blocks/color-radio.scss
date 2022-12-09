@@ -22,6 +22,10 @@
 .color-radio__item {
   list-style: none;
   margin-right: 5px;
+
+  @include vp-420 {
+    margin-right: 15px;
+  }
 }
 
 .color-radio__label {

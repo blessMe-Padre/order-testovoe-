@@ -4,6 +4,10 @@
   display: flex;
   margin: 0 0 10px 0;
   padding: 0;
+
+  @include vp-420 {
+    margin: 0 0 15px 0;
+  }
 }
 
 .size-radio__item {
@@ -27,6 +31,10 @@
     border-radius: 6px;
     margin-right: 5px;
     transition: background-color $trans-default;
+
+    @include vp-420 {
+      margin-right: 10px;
+    }
 
     &:hover {
       background-color: $color-glacier;

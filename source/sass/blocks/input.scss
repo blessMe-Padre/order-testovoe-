@@ -6,7 +6,7 @@
 .input-field {
   display: inline-block;
   min-height: 50px;
-  padding: 0 16px;
+  padding: 0 16px 0 16px;
   border: 1px solid $color-glacier;
   font-size: 16px;
   line-height: 21px;
@@ -15,6 +15,10 @@
   margin-bottom: 20px;
   transition: border $trans-default;
   outline: none;
+
+  @include vp-420 {
+    margin-bottom: 11px;
+  }
 
   &:not(:focus):invalid {
     border-color: $color-glacier;
@@ -57,6 +61,10 @@
   opacity: 0;
   transition: opacity $trans-default;
 
+  @include vp-420 {
+    top: -30px;
+  }
+
   &--address {
     top: -28px;
   }
@@ -70,6 +78,11 @@
   padding: 15px 20px;
   min-height: 140px;
   margin-bottom: 0;
+
+  @include vp-420 {
+    padding: 13px 16px;
+    min-height: 120px;
+  }
 }
 
 .input-textarea-text {
@@ -78,10 +91,19 @@
   color: $color-quartz;
   margin: 0;
   padding-left: 20px;
+
+  @include vp-420 {
+    margin-top: -10px;
+    padding-left: 17px;
+  }
 }
 
 .input-padding {
   padding-right: 160px;
+
+  @include vp-1023 {
+    padding-right: 95px;
+  }
 }
 
 .input-btn {
@@ -96,8 +118,18 @@
   color: $color-default-black;
   font-weight: bold;
 
+  @include vp-420 {
+    right: 0;
+  }
+
   svg {
     margin-right: 10px;
+  }
+}
+
+.input-address {
+  @media(max-width: 420px) {
+    padding: 0 50px 0 16px;
   }
 }
 

@@ -6,6 +6,21 @@
   line-height: 24px;
   color: $color-default-black;
 
+  @include vp-420 {
+    font-size: 16px;
+    line-height: 21px;
+    padding: 30px 17px 25px;
+
+    input::placeholder {
+      font-size: 14px;
+    }
+  }
+}
+
+@include vp-1023 {
+  input::placeholder {
+    font-size: 14px;
+  }
 }
 
 .order__list {
@@ -17,6 +32,10 @@
   list-style: none;
   display: flex;
   margin-bottom: 20px;
+
+  @include vp-420 {
+    margin-bottom: 9px;
+  }
 
   span {
     margin-left: auto;
@@ -38,6 +57,11 @@
   &--fs-16 {
     font-size: 16px;
     line-height: 21px;
+
+    @include vp-420 {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 
   &--mb-small {
@@ -51,6 +75,11 @@
   border-bottom: 1px solid $color-glacier;
   display: flex;
   justify-content: space-between;
+
+  @include vp-420 {
+    padding: 12px 0 2px;
+    margin-bottom: 15px;
+  }
 }
 
 .order__get-text {
@@ -70,6 +99,12 @@
   font-size: 28px;
   line-height: 30px;
   margin-bottom: 17px;
+
+  @include vp-420 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+  }
 
   span {
     margin-left: auto;
@@ -113,6 +148,15 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: color $trans-default;
+
+  &:hover {
+    color: $color-quartz;
+  }
+
+  @include vp-1023 {
+    right: 0;
+  }
 }
 
 .order__get-span {

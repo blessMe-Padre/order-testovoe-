@@ -59,7 +59,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 15px;
-    width: 60px;
+    width: 80px;
     background-color: transparent;
     padding: 0;
     border: none;
@@ -71,7 +71,7 @@
       position: absolute;
       top: 5px;
       right: 0;
-      width: 24px;
+      width: 33px;
       height: 1px;
       background-color: $color-default-black;
       transition: transform $trans-default;
@@ -82,7 +82,7 @@
       position: absolute;
       top: 14px;
       right: 0;
-      width: 16px;
+      width: 20px;
       height: 1px;
       background-color: $color-default-black;
       transition: width $trans-default, transform $trans-default;
@@ -90,7 +90,7 @@
 
     &:hover {
       &::after {
-        width: 24px;
+        width: 33px;
       }
     }
   }
@@ -99,6 +99,7 @@
     &::before {
       content: "";
       top: 9px;
+      width: 24px;
       transform: rotate(-45deg);
     }
 
@@ -106,6 +107,12 @@
       top: 9px;
       width: 24px;
       transform: rotate(45deg);
+    }
+
+    &:hover {
+      &::after {
+        width: 24px;
+      }
     }
   }
 }

@@ -9,6 +9,11 @@
   a {
     color: $color-quartz;
     text-decoration: underline;
+    transition: color $trans-default;
+
+    &:hover {
+      color: $color-tundora;
+    }
   }
 
   &--footer {

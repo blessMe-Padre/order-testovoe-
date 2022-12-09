@@ -22,10 +22,10 @@
   width: 153px;
 
 
-  @media(max-width: 420px) {
+  @include vp-420 {
     margin-left: 5px;
     margin-right: 10px;
-    width: 140px;
+    width: 160px;
   }
 }
 
@@ -44,6 +44,11 @@
   line-height: 24px;
   font-weight: bold;
   color: $color-default-black;
+
+  @include vp-420 {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .counter__count {

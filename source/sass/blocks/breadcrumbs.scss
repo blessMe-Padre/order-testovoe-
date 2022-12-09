@@ -1,5 +1,9 @@
 .breadcrumbs {
   margin-bottom: 34px;
+
+  @include vp-420 {
+    margin-bottom: 30px;
+  }
 }
 
 .breadcrumbs__list {
