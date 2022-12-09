@@ -1286,11 +1286,11 @@ button,
 }
 
 .counter__btn--minus {
-  background: url("../../img/svg/icon-minus.svg");
+  background: url("../img/svg/icon-minus.svg");
 }
 
 .counter__btn--plus {
-  background: url("../../img/svg/icon-plus.svg");
+  background: url("../img/svg/icon-plus.svg");
 }
 
 .counter__btn:disabled {
