@@ -22,19 +22,36 @@
     ::before {
       content: "/";
       position: absolute;
-      top: 6px;
+      top: 0;
       right: -13px;
     }
   }
 }
 
 .breadcrumbs__link {
+  position: relative;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   color: $color-quartz;
 
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-default-black;
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
   &--active {
-    color: #000000;
+    color: $color-default-black;
   }
 }

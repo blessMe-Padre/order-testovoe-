@@ -118,6 +118,12 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: opacity $trans-default;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
 
   @include vp-420 {
     top: 12px;

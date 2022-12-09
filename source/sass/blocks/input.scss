@@ -117,6 +117,11 @@
   align-items: center;
   color: $color-default-black;
   font-weight: bold;
+  transition: opacity $trans-default;
+
+  &:hover {
+    opacity: 0.4;
+  }
 
   @include vp-420 {
     right: 0;
