@@ -14,6 +14,12 @@ const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const gcmq = require('gulp-group-css-media-queries');
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
 
 const css = () => {
   return gulp.src('source/sass/style.scss')

@@ -70,11 +70,11 @@
   cursor: pointer;
 
   &--minus {
-    background: url('../../img/svg/icon-minus.svg');
+    background: url('../img/svg/icon-minus.svg');
   }
 
   &--plus {
-    background: url('../../img/svg/icon-plus.svg');
+    background: url('../img/svg/icon-plus.svg');
   }
 
   &:disabled {
