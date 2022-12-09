@@ -1,12 +1,6 @@
 const initMap = () => {
   ymaps.ready(init);
-
-
   function init() {
-
-
-
-
     let myMap = new ymaps.Map('map', {
       center: [55.751574, 37.573856],
       zoom: 9,
@@ -41,17 +35,6 @@ const initMap = () => {
 
     myMap.geoObjects
       .add(myPlacemarkWithContent);
-
-
-
-
-
-
-
-
-
-
-
     // Подключаем поисковые подсказки к полю ввода.
     var suggestView = new ymaps.SuggestView('suggest'),
       map,
