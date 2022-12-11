@@ -1,0 +1,19 @@
+.btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: opacity $trans-default;
+
+    // svg {
+    //     stroke: $color-default-black;
+    //     transition: opacity $trans-default;
+    // }
+
+    // svg:hover {
+    //     stroke: $color-quartz;
+    // }
+
+    &:hover {
+        opacity: 0.57;
+    }
+}

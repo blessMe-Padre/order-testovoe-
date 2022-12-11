@@ -678,6 +678,19 @@ button,
   background-color: #6e6e6e;
 }
 
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.57;
+}
+
 .title {
   font-weight: 400;
   font-size: 28px;
@@ -766,7 +779,7 @@ button,
 }
 
 .icon-list__item:hover {
-  opacity: 0.7;
+  opacity: 0.57;
 }
 
 .icon-list__counter {
@@ -1056,16 +1069,6 @@ button,
   justify-content: center;
   width: 32px;
   height: 32px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.card__btn:hover {
-  opacity: 0.4;
 }
 
 .remove {
@@ -1306,16 +1309,6 @@ button,
   justify-content: center;
   width: 32px;
   height: 32px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.counter__btn:hover {
-  opacity: 0.4;
 }
 
 .counter__btn--minus {
@@ -1631,9 +1624,6 @@ button,
   position: absolute;
   top: 12px;
   right: 20px;
-  cursor: pointer;
-  border: none;
-  background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1642,13 +1632,6 @@ button,
   align-items: center;
   color: #000000;
   font-weight: bold;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.input-btn:hover {
-  opacity: 0.4;
 }
 
 .input-btn svg {
@@ -1761,6 +1744,9 @@ input:checked + .payment-radio__span::after {
   z-index: 70;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .popup.is-active {

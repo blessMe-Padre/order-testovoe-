@@ -65,14 +65,6 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: opacity $trans-default;
-
-  &:hover {
-    opacity: 0.4;
-  }
 
   &--minus {
     background: url('../img/svg/icon-minus.svg');
