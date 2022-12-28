@@ -386,9 +386,10 @@
                 </div>
                 <div class="form__contact-input">
                   <label class="input-label">
-                    <input class="input-field" type="tel" name="tel" placeholder="Телефон" title="+79991234567"
-                      pattern="^\+?[\s\-\(\)0-9]{7,19}$" required>
+                    <input class="input-field" type="tel" name="tel" id="phone" placeholder="Телефон"
+                      title="+7(442)323-23-22" pattern="^\+?[\s\-\(\)0-9]{15}$" required aria-describedby="error1">
                     <span class="input-span">Телефон</span>
+                    <div class="input-error" id="error-tel">введите корректный номер телефона</div>
                   </label>
                   <label class="input-label">
                     <input class="input-field" type="email" id="email" placeholder="Email" name="email" required>

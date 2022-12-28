@@ -6,6 +6,7 @@ import { initCounter } from './modules/counter';
 import { initMap } from './modules/yandex';
 import { initPromo } from './modules/promo-check';
 import { initTextCount } from './modules/text-count';
+import { initImask } from './modules/imask';
 
 window.addEventListener('DOMContentLoaded', () => {
   // Modules
@@ -16,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initMap();
   initPromo();
   initTextCount();
+  initImask();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
