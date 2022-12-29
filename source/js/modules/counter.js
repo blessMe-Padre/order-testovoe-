@@ -25,6 +25,7 @@ const initCounter = () => {
           } else {
             --value;
           }
+          // disabled на кнопки
           if (value <= 0) {
             value = 0;
             target.closest('.counter').querySelector('.counter__btn--minus').setAttribute('disabled', 'disabled');
@@ -32,11 +33,13 @@ const initCounter = () => {
             target.closest('.counter').querySelector('.counter__btn--minus').removeAttribute('disabled', 'disabled');
           }
 
+          // расчет общей стоимости от количества ед.
           let count = target.closest('.counter').querySelector('.counter__count').value = value;
 
           target.closest('.counter').querySelector('.counter__after').value = count * price;
           target.closest('.counter').querySelector('.counter__discount-after').value = count * discount;
 
+          // карточка заказа
           let counterDiscount = document.querySelectorAll('.counter__discount-after');
           let sumDiscount = 0;
           counterDiscount.forEach((item) => {
@@ -51,10 +54,13 @@ const initCounter = () => {
           let totalSum = sumDiscount + sum - sum;
           productSum.innerText = formatPrice(totalSum);
 
-          let discountNew = Math.round(+sumDiscount / 100 * 16.6666);
-          let finelyPrice = totalSum - discountNew;
-          orderTotal.innerText = formatPrice(finelyPrice);
-          getTotal.value = finelyPrice;
+          // расчет всей суммы "акции"
+          let discountNew = sumDiscount - sum;
+
+          // расчет финальной суммы и добавление value в скрытый инпут
+          let finallyPrice = totalSum - discountNew;
+          orderTotal.innerText = formatPrice(finallyPrice);
+          getTotal.value = finallyPrice;
         }
       });
     });

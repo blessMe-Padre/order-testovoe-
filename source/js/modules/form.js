@@ -6,6 +6,7 @@ const initForm = () => {
 
   const formHandler = (evt) => {
     evt.preventDefault();
+    initPopup();
 
     /**
      * FIXME:
@@ -14,7 +15,6 @@ const initForm = () => {
     const formData = new FormData(form);
     // eslint-disable-next-line no-undef
     const values = Object.fromEntries(formData.entries());
-    initPopup();
     console.log(values);
   };
 
