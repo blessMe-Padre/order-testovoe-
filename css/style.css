@@ -1658,6 +1658,14 @@ button,
   border-color: #007e06;
 }
 
+.input-error {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #d92c2c;
+}
+
 .payment-radio {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2324,6 +2332,7 @@ input:checked + .payment-radio__span::after {
   }
 
   .input-field {
+    display: block;
     margin-bottom: 11px;
   }
 
@@ -2351,6 +2360,12 @@ input:checked + .payment-radio__span::after {
 
   .input-address {
     padding: 0 50px 0 16px;
+  }
+
+  .input-error {
+    font-size: 10px;
+    width: 250px;
+    bottom: -17px;
   }
 }
 
