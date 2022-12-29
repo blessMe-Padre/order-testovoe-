@@ -12,6 +12,7 @@ const initForm = () => {
      * скрыть токен
      */
     const formData = new FormData(form);
+    // eslint-disable-next-line no-undef
     const values = Object.fromEntries(formData.entries());
     initPopup();
     console.log(values);

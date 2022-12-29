@@ -1,8 +1,14 @@
+import formatPrice from '../modules/priceFormatter';
+
 const initCounter = () => {
   const counters = document.querySelectorAll('.counter');
+  const productSum = document.querySelector('.product-sum');
+  const orderTotal = document.querySelector('.order-total');
+  const getTotal = document.querySelector('.get-total');
 
   if (counters) {
     counters.forEach((counter) => {
+
       counter.addEventListener('click', (evt) => {
         const target = evt.target; // получаем нажатый counter
 
@@ -30,6 +36,25 @@ const initCounter = () => {
 
           target.closest('.counter').querySelector('.counter__after').value = count * price;
           target.closest('.counter').querySelector('.counter__discount-after').value = count * discount;
+
+          let counterDiscount = document.querySelectorAll('.counter__discount-after');
+          let sumDiscount = 0;
+          counterDiscount.forEach((item) => {
+            sumDiscount += +item.value;
+          });
+
+          let counterAfter = document.querySelectorAll('.counter__after');
+          let sum = 0;
+          counterAfter.forEach((item) => {
+            sum += +item.value;
+          });
+          let totalSum = sumDiscount + sum - sum;
+          productSum.innerText = formatPrice(totalSum);
+
+          let discountNew = Math.round(+sumDiscount / 100 * 16.6666);
+          let finelyPrice = totalSum - discountNew;
+          orderTotal.innerText = formatPrice(finelyPrice);
+          getTotal.value = finelyPrice;
         }
       });
     });

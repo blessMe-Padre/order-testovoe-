@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   init($("#surname"), $("#name"));
 
   $("#email").suggestions({
-    token: "66b9791ad59b7d04d364c17b8d9ebd2aa5ec663f",
+    token,
     type: "EMAIL",
   });
 });

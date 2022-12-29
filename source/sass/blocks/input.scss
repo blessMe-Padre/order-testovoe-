@@ -17,6 +17,7 @@
   outline: none;
 
   @include vp-420 {
+    display: block;
     margin-bottom: 11px;
   }
 
@@ -127,7 +128,7 @@
 .input-email {
   padding: 0 155px 0 16px;
 
-  @media(max-width: 420px) {
+  @include vp-420 {
     padding: 0 135px 0 16px;
   }
 }
@@ -135,7 +136,7 @@
 .input-address {
   padding: 0 65px 0 16px;
 
-  @media(max-width: 420px) {
+  @include vp-420 {
     padding: 0 50px 0 16px;
   }
 }
@@ -149,5 +150,19 @@
 
   &:not(:focus):valid {
     border-color: $color-tangerine;
+  }
+}
+
+.input-error {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: $color-torch-red;
+
+  @include vp-420 {
+    font-size: 10px;
+    width: 250px;
+    bottom: -17px;
   }
 }
